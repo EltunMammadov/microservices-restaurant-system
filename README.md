@@ -20,7 +20,7 @@ Texnologiyalar
 
 ---
 
-🏗️ Sistem Arxitekturası
+ Sistem Arxitekturası
 
 Layihə aşağıdakı mikroservislərdən ibarətdir:
 
