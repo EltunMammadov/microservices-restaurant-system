@@ -1,0 +1,13 @@
+server:
+  port: 6060
+spring:
+  application:
+    name: restaurant-service
+  datasource:
+    url: jdbc:postgresql://${DB_HOSTNAME:localhost}:${DB_PORT:5412}/${DB_SCHEMA:restaurant}
+    password: ${DB_PASSWORD:password}
+    username: ${DB_USERNAME:postgres}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none

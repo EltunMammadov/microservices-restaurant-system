@@ -1,0 +1,23 @@
+server:
+  port: 6062
+spring:
+  application:
+    name: order-service
+
+  datasource:
+    url: jdbc:postgresql://${DB_HOSTNAME:localhost}:${DB_PORT:5412}/${DB_SCHEMA:order}
+    password: ${DB_PASSWORD:password}
+    username: ${DB_USERNAME:postgres}
+    driver-class-name: org.postgresql.Driver
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+client:
+  urls:
+    menu-service: http://localhost:6061/menu-item/v1/
+
+
